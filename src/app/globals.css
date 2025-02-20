@@ -1,0 +1,124 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --leading-120: 120%;
+  --leading-130: 130%;
+  --leading-110: 110%;
+}
+
+@theme {
+  --color-*: initial;
+  --font-*: initial;
+  --text-*: initial;
+
+  --font-martian-mono: "Martian Mono", serif;
+  --font-inter: "Inter", sans-serif;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-neutral-100: #faf5f3;
+  --color-neutral-200: #e6e1df;
+  --color-neutral-700: #385159;
+  --color-neutral-900: #062630;
+  --color-light-salmon-50: #fff5ef;
+  --color-light-salmon-100: #ffe2d1;
+  --color-light-salmon-500: #fea36f;
+
+  /* Fonts Sizes */
+  --text-preset-1: clamp(
+    2.375rem,
+    1.946rem + 2.14vw,
+    3.875rem
+  ); /* 38px - 62px */
+  --text-preset-2: 50px;
+  --text-preset-3: 34px;
+  --text-preset-4: 24px;
+  --text-preset-5: 20px;
+  --text-preset-6: 18px;
+  --text-preset-7: 16px;
+  --text-preset-8: 14px;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background-color: var(--color-neutral-900);
+    color: var(--color-white);
+  }
+
+  html {
+    @apply scroll-pt-12 scroll-smooth lg:scroll-pt-11;
+  }
+
+  body {
+    @apply font-inter text-preset-5 mx-auto max-w-[2600px] overflow-x-hidden bg-neutral-100 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-martian-mono font-bold;
+  }
+
+  a {
+    @apply inline-block;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-30;
+  }
+
+  .gradient-text {
+    background: linear-gradient(
+      107.24deg,
+      var(--color-light-salmon-500) -11.37%,
+      var(--color-neutral-900) 61.84%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .prose {
+    @apply prose-ul:p-0 prose-ul:m-0 prose-li:p-0 prose-li:mx-0 prose-li:last:mb-0 max-w-full text-inherit;
+
+    strong {
+      @apply text-current;
+    }
+  }
+
+  /* Remove search decoration and cancel button */
+  [type="search"]::-webkit-search-decoration,
+  [type="search"]::-webkit-search-cancel-button {
+    appearance: none;
+  }
+}
+
+/* Storybook Styles ONLY: DO NOT DELETE */
+.sbdocs-content {
+  @apply mx-auto !max-w-[1920px];
+}
+/* End Storybook Styles: DO NOT DELETE */
