@@ -6,11 +6,7 @@ export const StepCard = ({
   ...props
 }: React.ComponentProps<"div">) => {
   return (
-    <div
-      data-slot="step-card"
-      className={cn("step-card-1", className)}
-      {...props}
-    />
+    <div data-slot="step-card" className={cn("sc-1", className)} {...props} />
   );
 };
 
@@ -21,12 +17,12 @@ export const StepCardHeader = ({
   return (
     <div
       data-slot="step-card-header"
-      className={cn("step-card-header-1", className)}
+      className={cn("sch-1", className)}
       {...props}
     >
       {props.children}
-      <div className={cn("step-card-header-2", className)} {...props}>
-        <CurvedArrow className="step-card-header-3" />
+      <div className={cn("sch-2", className)} {...props}>
+        <CurvedArrow className="sch-3" />
       </div>
     </div>
   );
@@ -48,7 +44,7 @@ export const StepCardNumber = ({
   return (
     <div
       data-slot="step-card-number"
-      className={cn("step-card-number-1", className)}
+      className={cn("scn-1", className)}
       {...props}
     />
   );
@@ -65,7 +61,7 @@ export const StepCardTitle = ({
   return (
     <Comp
       data-slot="step-card-title"
-      className={cn("step-card-title-1", className)}
+      className={cn("sct-1", className)}
       {...props}
     />
   );

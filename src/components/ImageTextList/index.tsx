@@ -31,25 +31,29 @@ export default function ImageTextList(props: ImageTextListProps) {
   if (hideItem) return null;
 
   return (
-    <section className={cn("img-text-1", sectionPadding && "img-text-2")}>
-      <Container className={cn("img-text-3", reverse && "img-text-4")}>
-        <div className="img-text-5">
-          <div className="img-text-6">
+    <section
+      className={cn("image-text-list-1", sectionPadding && "image-text-list-2")}
+    >
+      <Container
+        className={cn("image-text-list-3", reverse && "image-text-list-4")}
+      >
+        <div className="image-text-list-5">
+          <div className="image-text-list-6">
             <SectionTitle size="h2" as="h2">
               {headline}
             </SectionTitle>
           </div>
 
-          {description && <p className="img-text-7">{description}</p>}
+          {description && <p className="image-text-list-7">{description}</p>}
 
           {checklistItems?.map((item, index: number) => (
-            <div key={index} className="img-text-8">
+            <div key={index} className="image-text-list-8">
               <CheckList {...item} />
             </div>
           ))}
         </div>
 
-        <div className="img-text-9">
+        <div className="image-text-list-9">
           <Image
             src={
               mainImage?.url ||
@@ -58,7 +62,7 @@ export default function ImageTextList(props: ImageTextListProps) {
             alt={mainImage?.alt || "Image Text List"}
             width={560}
             height={520}
-            className="img-text-10"
+            className="image-text-list-10"
           />
 
           {supportImage && (
@@ -70,7 +74,10 @@ export default function ImageTextList(props: ImageTextListProps) {
               alt={supportImage.alt}
               width={119}
               height={138}
-              className={cn("img-text-11", reverse && "img-text-12")}
+              className={cn(
+                "image-text-list-11",
+                reverse && "image-text-list-12",
+              )}
             />
           )}
         </div>

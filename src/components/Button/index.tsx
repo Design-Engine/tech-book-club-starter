@@ -9,14 +9,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "button-1",
-        outline: "button-2",
+        default: "default-variant",
+        outline: "outline-variant",
       },
       size: {
-        default: "button-3",
-        sm: "button-4",
-        lg: "button-5",
-        icon: "button-6",
+        default: "default-size",
+        sm: "sm-size",
+        lg: "lg-size",
+        icon: "icon-size",
       },
     },
     defaultVariants: {

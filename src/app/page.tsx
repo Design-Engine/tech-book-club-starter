@@ -1,7 +1,20 @@
+import Hero, { HeroDefaults } from "@/components/Hero";
+import ImageTextList, {
+  ImageTextListDefaults,
+} from "@/components/ImageTextList";
+import Pricing, { PricingDefaults } from "@/components/Pricing";
+import Steps, { StepsDefaults } from "@/components/Steps";
+import Testimonials, { TestimonialsDefaults } from "@/components/Testimonials";
+
 export default function Home() {
   return (
     <>
-      <h1 className="text-center text-7xl font-bold underline">Hello world!</h1>
+      <Hero {...HeroDefaults} hasHeader />
+      <ImageTextList {...ImageTextListDefaults} />
+      <ImageTextList {...ImageTextListDefaults} reverse />
+      <Steps {...StepsDefaults} />
+      <Testimonials {...TestimonialsDefaults} />
+      <Pricing {...PricingDefaults} />
     </>
   );
 }

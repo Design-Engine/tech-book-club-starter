@@ -5,7 +5,6 @@ import Container from "@/components/container";
 import { logos } from "@/constants";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { ArrowDownIcon } from "@/components/icons";
 import { ButtonLink } from "@/types";
 
 type HeaderProps = {
@@ -39,22 +38,20 @@ export default function Header(props: HeaderProps) {
       <Container className="header-3">
         <Link href="/">
           {logos[logoOptions ?? "default"]}
-          <span className="sr-only">Logo</span>
+          <span className="header-4">Tech Club Logo</span>
         </Link>
 
         <Button
           asChild
           size="sm"
-          className={cn("header-4", isScrolled && "header-5")}
+          className={cn("header-5", isScrolled && "header-6")}
         >
           <Link
             href={button.url || "#"}
             target={button.newTab ? "_blank" : "_self"}
-            className="header-6"
+            className="header-7"
           >
             <span>{button.label}</span>
-
-            <ArrowDownIcon />
           </Link>
         </Button>
       </Container>
@@ -65,7 +62,7 @@ export default function Header(props: HeaderProps) {
 export const HeaderDefaults: HeaderProps = {
   logoOptions: "default",
   button: {
-    label: "SUBSCRIBE NOW",
+    label: "SUBSCRIBE",
     url: "/",
     newTab: false,
   },

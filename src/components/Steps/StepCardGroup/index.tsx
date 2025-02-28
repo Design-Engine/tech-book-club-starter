@@ -17,18 +17,14 @@ export default function StepCardGroup({
   steps?: StepsProps["steps"];
 }) {
   return (
-    <div className={cn("step-card-group-1", className)} {...props}>
+    <div className={cn("scg-1", className)} {...props}>
       {steps?.map((step, index) => (
-        <StepCard key={index} className="step-card-group-2">
-          <StepCardHeader className="step-card-group-3">
-            <StepCardNumber className="step-card-group-4">
-              {index + 1}
-            </StepCardNumber>
+        <StepCard key={index} className="scg-2">
+          <StepCardHeader>
+            <StepCardNumber className="scg-3">{index + 1}</StepCardNumber>
           </StepCardHeader>
           <StepCardContent>
-            <StepCardTitle className="step-card-group-5">
-              {step.title}
-            </StepCardTitle>
+            <StepCardTitle>{step.title}</StepCardTitle>
           </StepCardContent>
         </StepCard>
       ))}

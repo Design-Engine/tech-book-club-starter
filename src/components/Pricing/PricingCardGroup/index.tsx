@@ -16,7 +16,7 @@ export default function PricingCardGroup({
   pricingOptions?: PricingProps["pricingOptions"];
 }) {
   return (
-    <div className={cn("pricing-card-group-1", className)} {...props}>
+    <div className={cn("pcg-1", className)} {...props}>
       {pricingOptions?.map((option, index: number) => (
         <PricingCard key={index} featured={option.featured}>
           <PricingCardHeader {...option} />

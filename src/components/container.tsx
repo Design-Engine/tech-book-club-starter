@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
 
 const containerSizes = {
-  base: "container-1",
-  compact: "container-2",
+  base: "container-size-1",
+  compact: "container-size-2",
 };
 
 export default function Container({
@@ -17,7 +17,7 @@ export default function Container({
 } & React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn("container-3", containerSizes[size], className)}
+      className={cn("container-1", containerSizes[size], className)}
       {...props}
     >
       {children}

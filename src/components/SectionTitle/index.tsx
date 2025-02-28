@@ -24,7 +24,7 @@ export default function SectionTitle({
 }: SectionTitleProps) {
   return (
     <Comp
-      className={cn("section-title-1", titleSizes[size], className)}
+      className={cn("-tracking-[1px]", titleSizes[size], className)}
       {...props}
     >
       {children}

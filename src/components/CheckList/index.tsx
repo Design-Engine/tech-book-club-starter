@@ -9,7 +9,7 @@ export default function CheckList(props: CheckListProps) {
   return (
     <div className="check-list-1">
       <Check className="check-list-2" />
-      <span className="check-list-3">{title}</span>
+      <span>{title}</span>
     </div>
   );
 }
